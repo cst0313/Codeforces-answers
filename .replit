@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ 257C.cpp"
+run = "g++ temp.cpp -o main && ./main"
