@@ -4,7 +4,7 @@
 using namespace std;
 typedef long long ll;
 typedef long double ld;
-ll answer=-1;
+
 int main(){
   ll n;
   cin>>n;

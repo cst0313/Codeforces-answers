@@ -20,7 +20,7 @@ int main(){
     if(a[i]<prev){
       drop++;
       if(drop>=2){
-        cout<<-1;
+        cout<<-1; 
         return 0;
       }
       if(drop==1 and a[i]>base){
