@@ -27,6 +27,6 @@ ll dp(ll frem,ll hrem,ll fadd,ll hadd){//remaining troops and we can add before 
 int main(){
   cin>>f>>h>>mfs>>mhs;
   memset(memo,-1,sizeof(memo));
-  cout<<dp(f,h,mfs,mhs)%100000000;
+  cout<<dp(f,h,mfs,mhs)%mod;
   return 0;
 }
