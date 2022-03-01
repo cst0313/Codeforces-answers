@@ -1,28 +1,26 @@
-//313B
+//699C
 #include <bits/stdc++.h>
 
 using namespace std;
 typedef long long ll;
 typedef long double ld;
-
+ll dp[101][3];
 int main(){
-  string s;
-  cin>>s;
-  ll num[s.length()];
-  num[0]=0;
-  for(ll i=1;i<s.length();i++){
-    if(s[i]==s[i-1]){
-      num[i]=num[i-1]+1;
-    }else{
-      num[i]=num[i-1];
+  ll n;
+  cin>>n;
+  ll templ;
+  for(ll i=1;i<=n;i++){
+    cin>>templ;
+    dp[i][0]=max(max(dp[i-1][0],dp[i-1][1]),dp[i-1][2]);
+    if(templ==1){
+      dp[i][2]=max(dp[i-1][0],dp[i-1][1])+1;
+    }else if(templ==2){
+      dp[i][1]=max(dp[i-1][0],dp[i-1][2])+1;
+    }else if(templ==3){
+      dp[i][2]=max(dp[i-1][0],dp[i-1][1])+1;
+      dp[i][1]=max(dp[i-1][0],dp[i-1][2])+1;
     }
   }
-  ll q;
-  cin>>q;
-  ll t,b;
-  while(q--){
-    cin>>t>>b;
-    cout<<num[b-1]-num[t-1]<<endl;
-  }
+  cout<<n-max(max(dp[n][0],dp[n][1]),dp[n][2]);
   return 0;
 }
