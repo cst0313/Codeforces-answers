@@ -45,4 +45,11 @@ int main(){
     for each k. 
     
     In total, there will be n*n!-(n-1)-\sum(nPk-1) subarrays, for
-    k=1 to n-1, which is equivalent to n*n!-\sum(nPk).*/
+    k=1 to n-1, which is equivalent to n*n!-\sum(nPk).
+
+    Alternative solution with recurrence:
+    ll ans=1,k=1;
+    for(ll i=1;i<=n;i++){
+      k=k*i%mod;
+      ans=(ans*i+k-i)%mod;
+    }*/
