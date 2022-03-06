@@ -1,4 +1,4 @@
-//464A
+//465C
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -10,9 +10,9 @@ int main(){
   cin>>n>>p;
   string s;
   cin>>s;
-  ll pos=n-1;
-  s[pos]++;
-  while(pos>=0 and pos<n){
+  ll pos=n-1;//start from incrementing the end, since it affects least
+  s[pos]++;//next
+  while(pos>=0 and pos<n){//limits for position of string
     if(s[pos]-'a'>=p){//digit carrying
       s[pos]='a';
       pos--;
@@ -20,13 +20,13 @@ int main(){
         break;
       }
       s[pos]++;
-    }else if(pos!=0 and (s[pos]==s[pos-1]) or (pos>1 and s[pos]==s[pos-2])){//increment if not end, not equal to prev
+    }else if(pos!=0 and (s[pos]==s[pos-1]) or (pos>1 and s[pos]==s[pos-2])){//increment, if there is two to check for then check
       s[pos]++;
     }else{
       pos++;
     }
   }
-  if(pos==-1){
+  if(pos==-1){//incrementing to max, didn't work at all
     cout<<"NO";
   }else{
     cout<<s<<endl;
