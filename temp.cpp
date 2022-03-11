@@ -1,4 +1,4 @@
-//141C
+//270C
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -6,32 +6,19 @@ typedef long long ll;
 typedef long double ld;
 
 int main(){
-  vector <pair<int,string>>v;
   ll n;
   cin>>n;
-  string temps;
-  int templ;
-  map<int,int>m;
+  ll tld1=0;
+  ld tld2=0;
+  ll answer=0;
   for(ll i=0;i<n;i++){
-    cin>>temps>>templ;
-    m[templ]++;
-    v.push_back(make_pair(templ,temps));
-  }
-  sort(v.begin(),v.end());
-  vector<int> vs;
-  for(int i=0;i<n;i++){
-    if(v[i].first>i){
-      cout<<-1;
-      return 0;
+    cin>>tld1>>tld2;
+    if((ll)floor(tld2)==1){
+      answer=max(answer,tld1+1);
+    }else{
+      answer=max(answer,tld1+(ll)ceil(log10(tld2)/log10(4)));
     }
-    vs.insert(vs.begin()+v[i].first,i);
   }
-  int ans[n];
-  for(ll i=0;i<n;i++){
-    ans[vs[i]]=n-i;
-  }
-  for(ll i=0;i<n;i++){
-    cout<<v[i].second<<" "<<ans[i]<<endl;
-  }
+  cout<<answer;
   return 0;
 }
