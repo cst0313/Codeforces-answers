@@ -34,4 +34,4 @@ int main(){
   cout<<-1;//none are found: it is easy to prove upper bound is sqrt(n).
   //assume the number is greater than sqrt(n). But then the equation x^2+s(x)*x>x^2>n, which is a contradiction.
   return 0;
-}
+} 
