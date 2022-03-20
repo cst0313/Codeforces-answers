@@ -27,16 +27,16 @@ int main(){
   return 0;
 }//shift option k to align
 /*
-3-24
-math
+3-23
+chem
 8:15
 8:45
 bre
 9:20
-9:35
+9:34
 physics
 9:35
-9:50
+10:30
 math
 10:35
 10:55
