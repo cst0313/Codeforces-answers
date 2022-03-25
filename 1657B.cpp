@@ -2,7 +2,6 @@
 
 using namespace std;
 typedef long long ll;
-typedef long double ld;
 ll templ,templ2,templ3;
 int main(){
   ll n;
