@@ -11,38 +11,43 @@ int main(){
   cin>>lessons;
   string type;
   string ts,te;
-  cout<<"           if(date==\""<<date<<"\"){"<<endl;
+  cout<<endl;
+  cout<<"                        if (date == \""<<date<<"\") {"<<endl;
   while(lessons--){
-    cout<<"           ";
-    cout<<"  ";
+    cout<<"                            ";
     cin>>type;
     getline(cin,ts);
     getline(cin,ts);
     getline(cin,te);
-    cout<<"if(time>=\""<<ts<<"\" && time<\""<<te<<"\"){"<<endl;
-    cout<<"               link="<<type<<";"<<endl;
-    cout<<"             }"<<endl;
+    cout<<"if (time >= \""<<ts<<"\" && time < \""<<te<<"\") {"<<endl;
+    cout<<"                                link = "<<type<<";"<<endl;
+    cout<<"                            }"<<endl;
   }
-  cout<<'}'<<endl;
+  cout<<"                        }"<<endl;
   return 0;
 }//shift option k to align
 /*
-3-23
-chem
+3-28
+7
+math
 8:15
 8:45
 bre
 9:20
 9:34
-physics
+drive
 9:35
 10:30
-math
+drive
 10:35
 10:55
 break
-10:
+11:10
+11:20
+chem
+11:20
+11:59
 fin
-12:35
+13:05
 23:59
 */
